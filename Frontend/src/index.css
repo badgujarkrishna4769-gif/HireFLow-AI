@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  background-color: #1b1b1b;
+  color: white;
+}
+
+.form-container {
+  box-shadow: 
+    0 8px 32px rgba(105, 60, 60, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 20px 5px rgba(250, 249, 249, 0.103);
+}
+
+.loader {
+  animation: loaderAnimation linear 1s infinite 0s;
+}
+
+@keyframes loaderAnimation {
+  0% {
+    transform: rotate(0deg);
+  } 100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Report list scrollbar */
+.report-list::-webkit-scrollbar {
+    height: 6px;
+}
+
+.report-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+}
+
+.report-list::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #D552A3, #e94600);
+    border-radius: 20px;
+}
+
+.report-list::-webkit-scrollbar-thumb:hover {
+    background: #e94600;
+}
+
+/* Firefox */
+.report-list {
+    scrollbar-width: thin;
+    scrollbar-color: #D552A3 transparent;
+}
+
+.report-list {
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 5%,
+        black 95%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 5%,
+        black 95%,
+        transparent 100%
+    );
+}
+
+/* .generating-logo {
+   opacity: 0;
+  animation: opacityAnimation 2s linear infinite 0s alternate;
+  will-change: opacity;
+}
+
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }100% {
+    opacity: 10;
+  }
+} */
+
+@theme {
+    --animate-fade-in: fade-in 1s ease-in-out infinite alternate;
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0.2;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+/* .user-acc {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 20px 10px rgb(65, 65, 65);
+  position: relative;
+  overflow: hidden;
+} */
